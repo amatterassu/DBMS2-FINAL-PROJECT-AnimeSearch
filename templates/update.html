@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/layout.css') }}">
+    <style>
+        .navbar {
+        background-image: url('/static/img/kim.jpg');
+        }
+    </style>
+</head>
+<body>
+    <nav class = "navbar animate__animated animate__fadeInDown">
+    	<div class = "max-width">
+    		<div class = "logo"><a href="/">AnimeSearch</a></div>
+    		<ul class = "menu">
+    			<li><a href="/">Home</a></li>
+    			<li><a href="/genres">Genres</a></li>
+                <li><a href="/edits">Make Edits</a></li>
+                <li><a href="/statistics/pie">Statistics</a></li>
+                <li><a href="/search">Search</a></li>
+    		</ul>
+    		<div class = "menu-btn">
+    			<i class="fas fa-bars"></i>
+    		</div>
+    	</div>
+    </nav>
+    <h1 class = "animate__animated animate__fadeInDown">Update data
+    </h1> <br>
+    <form method="POST" action="/update" class = "animate__animated animate__fadeInUp">
+        <input type="text" placeholder="ID" value="{{ anime[0] }}" name="id"><br>
+        <input type="text" placeholder="Title" value="{{ anime[1] }}" name="title"><br>
+        <input type="text" placeholder="Description" value="{{ anime[2] }}" name="description"><br>
+        <input type="text" placeholder="Genre" value="{{ anime[3] }}" name="genre"> <br>
+        <input type="text" placeholder="Aired" value="{{ anime[4] }}" name="aired"> <br>
+        <input type="text" placeholder="Episodes" value="{{ anime[5] }}" name="episodes"> <br>
+        <input type="text" placeholder="Viewers" value="{{ anime[6] }}" name="viewers"> <br>
+        <input type="text" placeholder="Popularity" value="{{ anime[7] }}" name="popularity"> <br>
+        <input type="text" placeholder="Rank" value="{{ anime[8] }}" name="rank"> <br>
+        <input type="text" placeholder="Score" value="{{ anime[9] }}" name="score"> <br>
+        <input type="text" placeholder="URL of poster" value="{{ anime[10] }}" name="poster"> <br>
+        <input type="text" placeholder="URL of MAL page" value="{{ anime[11] }}" name="page"> <br>
+        <input type="submit" value="UPDATE" class = "buttons1">
+    </form>
+</body>
+</html>

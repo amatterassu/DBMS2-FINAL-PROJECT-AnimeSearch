@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Graphs</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <style>
+      .navbar {
+        background-image: url('/static/img/x.png');
+      }
+  </style>
+</head>
+<body>
+    <nav class = "navbar animate__animated animate__fadeInDown">
+    	<div class = "max-width">
+    		<div class = "logo"><a href="/">AnimeSearch</a></div>
+    		<ul class = "menu">
+    			<li><a href="/">Home</a></li>
+    			<li><a href="/genres">Genres</a></li>
+                <li><a href="/edits">Make Edits</a></li>
+                <li><a href="/statistics/pie">Statistics</a></li>
+                <li><a href="/search">Search</a></li>
+    		</ul>
+    		<div class = "menu-btn">
+    			<i class="fas fa-bars"></i>
+    		</div>
+    	</div>
+    </nav>
+    <h1 class = "eps">Animes with the most episodes <a href="/statistics/line" style = "text-decoration: none; color: white; padding-left: 30px;">></a></h1>
+    <canvas id="pie-chart"></canvas>
+        <script>
+        new Chart(document.getElementById("pie-chart"), {
+    type: 'pie',
+    data: {
+      labels: {{ labels | safe }},
+      datasets: [{
+        label: "Population (millions)",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "yellow", "orange", "#ff3838", "green", "pink"],
+        data: {{ values | safe }}
+      }]
+    },
+    options: {
+            responsive: false,
+            aspectRatio:2,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+            
+        }
+    });
+    </script>
+</body>
+</html>

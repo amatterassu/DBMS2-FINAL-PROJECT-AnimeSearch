@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+body {
+	background-color: #070b34;
+}
+html {
+    scroll-behavior: smooth;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+}
+.max-width {
+	max-width: 1300px;
+	padding: 0 80px;
+	margin: auto;
+}
+.navbar {
+    color:white;
+	width: 100%;
+	padding: 22px 0;
+	position: relative;
+	font-family: 'Oswald', sans-serif;
+	transition: all 0.3s ease;
+	border-bottom: 1px solid white;
+}
+.navbar .max-width {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navbar .logo a{
+	color: white;
+	font-size: 33px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.navbar .logo a:hover {
+    color: #26c9ac;
+}
+.navbar .menu li{
+	list-style: none;
+	display: inline-block;
+}
+.navbar .menu li a {
+	color: white;
+	font-size: 28px;
+	font-weight: 500;
+	margin-left: 25px;
+	transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+	color: #26c9ac;
+}
+.menu-btn{
+	color: #737272;
+	font-size: 23px;
+	cursor: pointer;
+	display: none;
+}
+
+.blocks {
+	display:flex;
+	flex-direction: column;
+	margin-left: 188px;
+	color: white;
+}
+.block {
+	padding-top: 22px;
+	display: flex;
+	flex-direction: row;
+}
+img {
+	width: 100%;
+}
+.block img {
+	width: 200px;
+}
+table {
+	width: 80%;
+	color:white;
+	text-decoration: none;
+	font-size: 42px;
+	margin-left: 244px;
+	margin-top:160px;
+	transition: color 0.3s ease;
+}
+table a:link {
+	color:white;
+}
+table a:visited {
+	color:white;
+}
+table a:hover {
+	color:#26c9ac;
+	transition: all 0.3s ease;
+}
+.block .description {
+	margin-left: 40px;
+}
+form {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  margin-left: 650px; 
+  width: 300px;
+}
+#pie-chart {
+	background-color: white;
+width: 720px !important;
+height: 370px !important;
+color: white;
+margin-left: 390px;
+margin-top: 90px;
+position: relative;
+}
+.eps {
+	color:white;
+	position: absolute;
+	margin-left: 600px;
+	margin-top:30px;
+
+}
+#bar-chart {
+	background-color: white;
+width: 740px !important;
+height: 390px !important;
+color: white;
+margin-left: 390px;
+margin-top: 90px;
+position: relative;
+}
+.eps2 {
+	color:white;
+	position: absolute;
+	margin-left: 600px;
+	margin-top:30px;
+
+}

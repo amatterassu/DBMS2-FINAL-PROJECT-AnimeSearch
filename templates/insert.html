@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/layout.css') }}">
+    <style>
+        .navbar {
+        background-image: url('/static/img/kim.jpg');
+        }
+    </style>
+</head>
+<body>
+    <nav class = "navbar animate__animated animate__fadeInDown">
+    	<div class = "max-width">
+    		<div class = "logo"><a href="/">AnimeSearch</a></div>
+    		<ul class = "menu">
+    			<li><a href="/">Home</a></li>
+    			<li><a href="/genres">Genres</a></li>
+                <li><a href="/edits">Make Edits</a></li>
+                <li><a href="/statistics/pie">Statistics</a></li>
+                <li><a href="/search">Search</a></li>
+    		</ul>
+    		<div class = "menu-btn">
+    			<i class="fas fa-bars"></i>
+    		</div>
+    	</div>
+    </nav>
+    <h1 class = "animate__animated animate__fadeInDown">ADD ANIME
+    </h1> <br>
+    <form method="POST" action="/insert" class = "animate__animated animate__fadeInUp">
+        <input type="text" placeholder="ID" name="id"><br>
+        <input type="text" placeholder="Title" name="title"><br>
+        <input type="text" placeholder="Description" name="description"><br>
+        <input type="text" placeholder="Genre" name="genre"> <br>
+        <input type="text" placeholder="Aired" name="aired"> <br>
+        <input type="text" placeholder="Episodes" name="episodes"> <br>
+        <input type="text" placeholder="Viewers" name="viewers"> <br>
+        <input type="text" placeholder="Popularity" name="popularity"> <br>
+        <input type="text" placeholder="Rank" name="rank"> <br>
+        <input type="text" placeholder="Score" name="score"> <br>
+        <input type="text" placeholder="URL of poster" name="poster"> <br>
+        <input type="text" placeholder="URL of MAL page" name="page"> <br>
+        <input type="submit" value="INSERT" class = "buttons1">
+    </form>
+</body>
+</html>

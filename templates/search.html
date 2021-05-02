@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <style>
+        input{
+border: 4px solid #26c9ac;
+    border-radius: 5px;  
+    padding:4px 8px 4px 8px;
+}
+      .navbar {
+        background-image: url('/static/img/nar.jpg');
+        background-size: cover;
+      }
+
+    </style>
+</head>
+<body>
+    <nav class = "navbar animate__animated animate__fadeInDown">
+    	<div class = "max-width">
+    		<div class = "logo"><a href="">AnimeSearch</a></div>
+    		<ul class = "menu">
+    			<li><a href="/">Home</a></li>
+    			<li><a href="/genres">Genres</a></li>
+                <li><a href="/edits">Make Edits</a></li>
+                <li><a href="/statistics/pie">Statistics</a></li>
+                <li><a href="/search">Search</a></li>
+    		</ul>
+    		<div class = "menu-btn">
+    			<i class="fas fa-bars"></i>
+    		</div>
+    	</div>
+    </nav>
+    <form method="POST" class = "animate__animated animate__fadeInDown">
+        <input type="text" name = "search">
+        <input type="submit" value = "Search">
+    </form>
+    <div class="blocks">
+        {% for anime in animes %}
+        <div class="block">
+            <img src="{{ anime[1] }}" alt="">
+            <div class = "description">
+            <h1>{{ anime[0] }}</h1> <br>
+            <h2>Rating: ⭐{{ anime[2] }} <br>
+            Episodes: {{ anime[3] }} <br>
+            Popularity: {{ anime[4] }} <br>
+            Comment: {{ anime[5] }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

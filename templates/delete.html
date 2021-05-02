@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/layout.css') }}">
+    <style>
+        .navbar {
+        background-image: url('/static/img/kim.jpg');
+        }
+    </style>
+</head>
+<body>
+    <nav class = "navbar animate__animated animate__fadeInDown">
+    	<div class = "max-width">
+    		<div class = "logo"><a href="/">AnimeSearch</a></div>
+    		<ul class = "menu">
+    			<li><a href="/">Home</a></li>
+    			<li><a href="/genres">Genres</a></li>
+                <li><a href="/edits">Make Edits</a></li>
+                <li><a href="/statistics/pie">Statistics</a></li>
+                <li><a href="/search">Search</a></li>
+    		</ul>
+    		<div class = "menu-btn">
+    			<i class="fas fa-bars"></i>
+    		</div>
+    	</div>
+    </nav>
+    <h1 class = "animate__animated animate__fadeInDown">Enter ID of anime, that you want to delete
+    </h1> <br>
+    <form method="POST" action="/delete" class = "animate__animated animate__fadeInUp">
+        <input type="text" placeholder="ID" name="id"><br>
+        <input type="submit" value="DELETE" class = "buttons1">
+    </form>
+</body>
+</html>
