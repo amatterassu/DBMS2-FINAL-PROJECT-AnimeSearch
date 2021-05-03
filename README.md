@@ -1,6 +1,6 @@
 # DBMS2-FINAL-PROJECT-AnimeSearch
  
-This is repo for database inal project.
+This is repo for database final project\
 Team se7en: Nurdaulet Daudov, Medet Kurganbayev, Kuanysh Sarsenbay, Bislan Arys
 
 ## Technical Requirements
