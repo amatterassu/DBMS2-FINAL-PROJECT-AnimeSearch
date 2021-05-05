@@ -94,9 +94,9 @@ def insert():
         return render_template('insert.html')
 
 
-@app.route('/update', defaults={'id': None}, methods=['GET', 'POST'])
-@app.route('/update/<int:id>')
-def update(id):
+@app.route('/update', methods=['GET', 'POST'])
+@app.route('/update', methods=['GET'])
+def update():
     if request.method == "POST":
         cursor = connection.cursor()
         cursor.execute('begin paket.upd_anime(:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11, :12); end;', [
@@ -117,6 +117,8 @@ def update(id):
 
         return redirect('/insert')
     else:
+        id = request.args.get('id')
+
         cursor = connection.cursor()
         cursor.execute(f"select * from anime4 where id = {id}")
         anime = cursor.fetchone()
